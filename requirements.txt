@@ -4,3 +4,4 @@ ndg-httpsclient
 pyasn1
 urllib3
 edgegrid-python
+pprint
