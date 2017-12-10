@@ -3,6 +3,7 @@ import requests
 from akamai.edgegrid import EdgeGridAuth
 from urlparse import urljoin
 from pprint import pprint
+import os
 
 
 def auth(a_client_token, a_client_secret, a_access_token):
