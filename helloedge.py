@@ -39,7 +39,7 @@ if __name__ == "__main__":
     for org in origins:
         f.write('<tr><td><pre>')
         pprint(org, f)
-        f.write('</pre></td></tr>\n')
+        f.write('</pre><hr></td></tr>\n')
 
     f.write('</table></body></html>')
     f.close()
