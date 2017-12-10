@@ -31,4 +31,15 @@ if __name__ == "__main__":
 
     s = auth(client_token, client_secret, access_token)
     origins = list_live_origins(s, baseurl)
-    pprint(origins)
+
+    f = open(os.environ['HTML_REPORT'], 'w')
+    f.write('<!DOCTYPE html><html><head><style>table,th,td{border:1px solid black;}</style></head>'
+            '<body><table width="100%">\n')
+
+    for org in origins:
+        f.write('<tr><td><pre>')
+        pprint(org, f)
+        f.write('</pre></td></tr>\n')
+
+    f.write('</table></body></html>')
+    f.close()
