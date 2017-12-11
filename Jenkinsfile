@@ -16,7 +16,7 @@ pipeline {
     }
     post {
         success {
-            echo 'Pipeline completed successfully.'
+            echo "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})"
         }
     }
 }
