@@ -14,6 +14,9 @@ pipeline {
         }
         stage('Test02') {
             steps {
+                3.times {
+                    println "Hello World ${it}"
+                }
                 echo 'Testing 2nd time...'
             }
         }
