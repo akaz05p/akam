@@ -14,8 +14,8 @@ pipeline {
         }
         stage('Test02') {
             steps {
-                3.times {
-                    println "Hello World ${it}"
+                for (int i = 0; i < 10; i++) {
+                    sh "echo Hello ${i}"
                 }
                 echo 'Testing 2nd time...'
             }
