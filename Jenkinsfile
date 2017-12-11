@@ -10,6 +10,7 @@ pipeline {
         stage('Test01') {
             steps {
                 echo 'Testing 1st time...'
+                build("Akamai")
             }
         }
         stage('Test02') {
