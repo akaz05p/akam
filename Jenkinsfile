@@ -6,9 +6,9 @@ pipeline {
             steps {
                 echo 'Testing...'                
                 script {
-                    for (int i = 1; i <= 10; i++) {
+                    for (def i = 1; i <= 10; i++) {
                         echo "Testing ${i} time..."
-                        build("Akamai")
+                        build(job:"Akamai")
                     }
                 }
             }
