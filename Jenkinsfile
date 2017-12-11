@@ -14,8 +14,10 @@ pipeline {
         }
         stage('Test02') {
             steps {
-                for (int i = 0; i < 10; i++) {
-                    sh "echo Hello ${i}"
+                script {
+                    for (def i = 0; i < 10; i++) {
+                        sh "echo Hello ${i}"
+                    }
                 }
                 echo 'Testing 2nd time...'
             }
