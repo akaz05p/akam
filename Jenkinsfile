@@ -14,4 +14,9 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            mail to: cpeng@akamai.com, subject: '[Jenkins] ${env.JOB_NAME} completed.'
+        }
+    }
 }
