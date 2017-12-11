@@ -8,9 +8,7 @@ pipeline {
                 script {
                     for (def i = 1; i <= 10; i++) {
                         echo "Testing ${i} time..."
-                        timeout(3) {
-                            build(job:"Akamai")
-                        }
+                        build("Akamai")
                     }
                 }
             }
