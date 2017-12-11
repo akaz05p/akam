@@ -19,7 +19,9 @@ pipeline {
         }
         stage('Test03') {
             steps {
-                echo 'Testing 3rd time...'
+                retry(3) {
+                    echo 'Testing 3rd time...'
+                }
             }
         }
         stage('Test04') {
